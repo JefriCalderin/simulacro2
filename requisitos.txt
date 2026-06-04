@@ -1,0 +1,196 @@
+SIMULACRO DE PRUEBA DE DESEMPEÑO
+JAVASCRIPT
+Objetivo
+Desarrollar una SPA (Single Page Application) para la gestión de proyectos internos de una empresa
+utilizando JavaScript (Vanilla JS o Vite), implementando autenticación, manejo de roles, persistencia
+de sesión y consumo de una API simulada mediante json-server.
+Contexto del Problema
+Una empresa de desarrollo de software necesita una herramienta interna para administrar
+proyectos.
+Cada proyecto tendrá:
+• Nombre
+• Descripción
+• Estado
+• Fecha de creación
+• Responsable
+El sistema contará con dos tipos de usuarios:
+• Manager
+• Collaborator
+Cada uno tendrá permisos específicos.
+Requerimientos Funcionales
+1. Autenticación
+La aplicación debe permitir:
+Inicio de sesión
+Formulario con:
+• correo electrónico
+• contraseña
+Validar credenciales desde json-server.
+Debe existir:
+• manejo de errores
+• mensajes informativos
+• persistencia de sesión
+La persistencia podrá realizarse usando:
+• localStorage
+• sessionStorage
+• cookies
+2. Usuarios Predefinidos
+No debe existir registro de usuarios.
+Los usuarios deberán estar cargados previamente en db.json.
+Debe existir:
+Usuario Manager
+Puede administrar todos los proyectos.
+Usuario Collaborator
+Puede visualizar únicamente los proyectos asignados.
+3. Manejo de Roles
+MANAGER
+Puede:
+• Ver todos los proyectos
+• Crear proyectos
+• Editar proyectos
+• Eliminar proyectos
+• Consultar detalles de cualquier proyecto
+COLLABORATOR
+Puede:
+• Ver proyectos asignados
+• Consultar detalles
+• Actualizar únicamente el estado de sus proyectos
+No puede:
+• Crear proyectos
+• Eliminar proyectos
+• Modificar proyectos ajenos
+4. CRUD de Proyectos
+Implementar:
+Crear Proyecto
+Campos:
+• Nombre
+• Descripción
+• Estado
+• Responsable
+Listar Proyectos
+Mostrar en tabla o cards.
+Editar Proyecto
+Actualizar información.
+Eliminar Proyecto
+Eliminar registros.
+Consumir:
+• GET
+• POST
+• PATCH o PUT
+• DELETE
+5. Protección de Vistas
+Si no existe sesión:
+• no debe acceder a vistas privadas
+Si el usuario es Collaborator:
+• no debe ingresar a vistas administrativas
+Debe existir:
+• redirección automática
+• logout funcional
+6. Comportamiento SPA
+La aplicación debe:
+• navegar sin recargar el navegador
+• renderizar dinámicamente
+• actualizar vistas mediante JavaScript
+7. Dashboard
+Al iniciar sesión:
+Manager
+Debe visualizar:
+• Total de proyectos
+• Proyectos activos
+• Proyectos finalizados
+Collaborator
+Debe visualizar:
+• Cantidad de proyectos asignados
+• Estado de cada proyecto
+8. Persistencia de Sesión
+La sesión debe mantenerse:
+• al refrescar la página
+• al volver a abrir el navegador (si aplica)
+Debe existir:
+• cierre de sesión
+• limpieza de datos de sesión
+9. Interfaz
+Puede utilizar:
+• CSS
+• Bootstrap
+• TailwindCSS
+• Sass
+Se evaluará:
+• organización visual
+• experiencia de usuario
+• responsive design
+10. README OBLIGATORIO (EN INGLÉS)
+Debe incluir:
+Project Name
+Description
+Technologies
+Installation
+Running the Project
+Running JSON Server
+Test Users
+Project Structure
+Role Permissions
+Technical Decisions
+Restricciones
+Prohibido
+• IA generativa
+• copiar proyectos completos
+• plantillas CRUD completas
+Permitido
+• MDN
+• StackOverflow
+• Documentación oficial
+Requisitos Técnicos
+Debe incluir:
+• Modularización
+• Eventos
+• DOM
+• Fetch API o Axios
+• Manejo de errores
+• Código organizado
+• json-server
+Ejemplo db.json
+{
+ "users": [
+ {
+ "id": 1,
+ "name": "Manager",
+ "email": "manager@test.com",
+ "password": "123456",
+ "role": "manager"
+ },
+ {
+ "id": 2,
+ "name": "Collaborator",
+ "email": "user@test.com",
+ "password": "123456",
+ "role": "collaborator"
+ }
+ ],
+ "projects": [
+ {
+ "id": 1,
+ "name": "Website Redesign",
+ "description": "Corporate website redesign",
+ "status": "In Progress",
+ "assignedTo": 2
+ }
+ ]
+}
+Puntos Extra
+• Dark Mode
+• Buscador
+• Filtros por estado
+• Paginación
+• Toasts
+• Loader
+• Deploy
+• Validaciones avanzadas
+Rúbrica
+Criterio Porcentaje
+Cumplimiento de requerimientos 15%
+JavaScript 10%
+Arquitectura SPA 15%
+CRUD y consumo API 15%
+Persistencia de sesión 10%
+Documentación 10%
+Sustentación técnica 25%

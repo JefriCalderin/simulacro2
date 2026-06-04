@@ -1,0 +1,68 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Manager User",
+      "email": "manager@test.com",
+      "password": "123456",
+      "role": "manager"
+    },
+    {
+      "id": 2,
+      "name": "Collaborator User",
+      "email": "user@test.com",
+      "password": "123456",
+      "role": "collaborator"
+    }
+  ],
+  "projects": [
+    {
+      "id": 2,
+      "name": "Mobile App Developments",
+      "description": "Cross-platform mobile application for clients",
+      "status": "in_progress",
+      "createdAt": "2026-05-10",
+      "assignedTo": 2
+    },
+    {
+      "id": 3,
+      "name": "Database Migrations",
+      "description": "Migrate legacy database to new cloud infrastructures",
+      "status": "completed",
+      "createdAt": "2026-04-15",
+      "assignedTo": 1
+    },
+    {
+      "id": 4,
+      "name": "API Integration",
+      "description": "Integrate third-party payment API",
+      "status": "in_progress",
+      "createdAt": "2026-05-20",
+      "assignedTo": 1
+    },
+    {
+      "id": 5,
+      "name": "Security Audit",
+      "description": "Full security audit of all internal systems, haciendo una prueba de edicion",
+      "status": "in_progress",
+      "createdAt": "2026-05-25",
+      "assignedTo": 1
+    },
+    {
+      "name": "esto es una pruba",
+      "description": "esto es una prueba de precarga",
+      "status": "in_progress",
+      "assignedTo": 2,
+      "createdAt": "2026-06-04",
+      "id": 6
+    },
+    {
+      "name": "prueba 2",
+      "description": "esto es otra prueba",
+      "status": "in_progress",
+      "assignedTo": 1,
+      "createdAt": "2026-06-04",
+      "id": 7
+    }
+  ]
+}

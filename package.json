@@ -1,0 +1,14 @@
+{
+  "name": "project-manager",
+  "version": "1.0.0",
+  "description": "SPA for internal project management with json-server",
+  "scripts": {
+    "api": "npx json-server --watch db.json --port 3000",
+    "start": "npx serve ."
+  },
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "pdf-parse": "^2.4.5",
+    "serve": "^14.2.0"
+  }
+}
